@@ -1,8 +1,8 @@
 import React from 'react';
 
-const NavBar = (props) => {
+// const NavBar = (props) => {
 
-    return (  );
-}
+//     return (  );
+// }
 
-export default NavBar;
+// export default NavBar;

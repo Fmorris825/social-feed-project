@@ -1,8 +1,9 @@
 import React from 'react';
+import { useState } from 'react';
 
-const Post = (props) => {
+// const Post = (props) => {    }
 
-    return (  );
-}
+//     return (  );
+// }
 
-export default Post;
+// export default Post;
