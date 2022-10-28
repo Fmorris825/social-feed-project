@@ -1,30 +1,39 @@
-import React, { useState } from 'react';
-import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
-// import NavBar from './Components/NavBar/NavBar';
-// import Post from './Components/Post/Post';
-// import PostList from './Components/PostList/PostList';
+import React, { useState } from "react";
+import CreatePostForm from "./Components/CreatePostForm/CreatePostForm";
+import Navigation from "./Components/Navigation/Navigation";
+import PostList from "./Components/PostList/PostList";
 
+import { Container, Stack } from "react-bootstrap";
+import "./App.css";
 
 function App() {
+  const [posts, setPosts] = useState([
+    { name: "Fred Morris", post: "Keep Chugging... Choooo Choooo" },
+    { name: "Fred Morris", post: "Keep Chugging... Choooo Choooo" },
+  ]);
 
-  const [posts, setPost] = useState([{Name: 'Fred Morris', Post: 'Keep Chugging... Choooo Choooo'}])
-
-  // function addNewPost(post){
-  //   let tempPost = [...posts, post];
-  //   setPost(tempPost);
-  // }
+  function addNewPost(post) {
+    let tempPosts = [post, ...posts];
+    setPosts(tempPosts);
+  }
 
   return (
-    <div >
-      {/* <NavBar />
-      <Post /> */}
-      <CreatePostForm parentPost = {posts}/>
-      {/* <PostList parentPost = {posts}/> */}
-      
+    <div className="Body">
+      <div>
+        <Navigation />
+      </div>
+      <Container className="AppBody">
+        <Stack gap={5}>
+          <div>
+            <CreatePostForm addNewPost={addNewPost} />
+          </div>
+          <div>
+            <PostList allPosts={posts} />
+          </div>
+        </Stack>
+      </Container>
     </div>
   );
 }
 
 export default App;
-
-

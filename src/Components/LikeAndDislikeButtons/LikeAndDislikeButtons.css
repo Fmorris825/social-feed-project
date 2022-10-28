@@ -1,0 +1,11 @@
+/* button:hover {
+  box-shadow: ;
+} */
+
+.active {
+  background-color: red;
+}
+
+.inactive {
+  background-color: blue;
+}
