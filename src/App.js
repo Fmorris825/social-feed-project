@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CreatePostForm from "./Components/CreatePostForm/CreatePostForm";
 import Navigation from "./Components/Navigation/Navigation";
 import PostList from "./Components/PostList/PostList";
@@ -8,7 +8,6 @@ import "./App.css";
 
 function App() {
   const [posts, setPosts] = useState([
-    { name: "Fred Morris", post: "Keep Chugging... Choooo Choooo" },
     { name: "Fred Morris", post: "Keep Chugging... Choooo Choooo" },
   ]);
 

@@ -2,6 +2,10 @@
   padding: 2em;
 }
 
-.Body {
+Body {
   background-color: #f0f0f0;
+  background-image: url("/Users/fredmorris/DevCodeCamp/social-feed-project/evgeniy-smersh-LC1xhKZxJ9k-unsplash.jpg");
+  color: whitesmoke;
+  background-position: center;
+  background-repeat: repeat;
 }

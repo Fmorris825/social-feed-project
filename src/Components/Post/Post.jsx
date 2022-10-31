@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ToggleButtonGroupUncontrolled from "../LikeAndDislikeButtons/LikeAndDislikeButtons";
 
 import { Container, ListGroupItem, Row, Col } from "react-bootstrap";
 import "./Post.css";
+import PostDate from "../PostDate/PostDate";
 
 const Post = (props) => {
   return (
@@ -10,8 +11,11 @@ const Post = (props) => {
       <ListGroupItem>
         <Row>
           <Col className="PostContent">
-            <div>
+            <div className="d-flex justify-content-between">
               <h3>{props.post.name}</h3>
+              <h7>
+                <PostDate />
+              </h7>
             </div>
             <div className="PostText">{props.post.post}</div>
           </Col>

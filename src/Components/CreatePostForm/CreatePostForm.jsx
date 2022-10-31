@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Card,
   Container,
@@ -10,6 +10,10 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 const CreatePostForm = (props) => {
+  useEffect(() => {
+    handleSubmit();
+  }, [props.addNewPost]);
+
   const [name, setName] = useState("Enter Username");
   const [post, setPost] = useState("What's on your mind...");
 
@@ -19,7 +23,6 @@ const CreatePostForm = (props) => {
       name: name,
       post: post,
     };
-    // console.log(newPost);
     props.addNewPost(newPost);
   }
 
