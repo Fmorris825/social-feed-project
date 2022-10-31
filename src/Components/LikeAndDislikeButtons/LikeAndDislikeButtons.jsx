@@ -11,8 +11,11 @@ const LikeAndDislikeButtons = (props) => {
   function handleClick() {
     if (likeClass === "inactive") {
       setLikeClass("active");
-    } else if (likeClass === "active") {
       setDislikeClass("inactive");
+    }
+    if (likeClass === "active") {
+      setLikeClass("inactive");
+      setDislikeClass("active");
     }
   }
 
