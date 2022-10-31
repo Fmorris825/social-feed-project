@@ -10,10 +10,6 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 const CreatePostForm = (props) => {
-  useEffect(() => {
-    handleSubmit();
-  }, [props.addNewPost]);
-
   const [name, setName] = useState("Enter Username");
   const [post, setPost] = useState("What's on your mind...");
 

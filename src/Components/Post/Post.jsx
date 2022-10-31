@@ -13,9 +13,9 @@ const Post = (props) => {
           <Col className="PostContent">
             <div className="d-flex justify-content-between">
               <h3>{props.post.name}</h3>
-              <h7>
+              <span>
                 <PostDate />
-              </h7>
+              </span>
             </div>
             <div className="PostText">{props.post.post}</div>
           </Col>
